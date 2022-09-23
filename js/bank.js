@@ -15,6 +15,11 @@ document.getElementById('primary-deposite').addEventListener('click',function() 
     if(inputField > 0){
         Deposite.innerText = DepositeFloat + inputField;
         totalBalance.innerText = Balancefloat + inputField;
+        Swal.fire({
+            icon: 'success',
+            title: 'Deposite Successful',
+            text: 'You successfully deposited your money!',
+          })
     } 
     else{
         Swal.fire({
@@ -43,6 +48,11 @@ document.getElementById('withdraw-amount').addEventListener('click',function () 
     if(totalBalance.innerText >= inputField  && inputField > 0){
     totalWithdraw.innerText = totalWithdrawFloat + inputField;
     totalBalance.innerText = Balancefloat - inputField;
+    Swal.fire({
+        icon: 'success',
+        title: 'Withdraw Successful',
+        text: 'You successfully withdraw your money!',
+      })
     }
     else{
         Swal.fire({
